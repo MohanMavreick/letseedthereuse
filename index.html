@@ -1,0 +1,39 @@
+<html>
+<head>
+<!-- CSS (load bootstrap) -->
+<link rel="stylesheet" href="assests/css/style.css">
+<link rel="stylesheet" href="assests/css/bootstrap.min.css">
+<!-- JS (load angular, ui-router, and our custom js file) -->
+<script src="apps/libs/jquery-3.3.1.slim.min.js"></script>
+<script src="apps/libs/bootstrap.min.js"></script>
+<script src="apps/libs/bootstrap.bundle.min.js"></script>
+<script src="apps/libs/angular.min.js"></script>
+<script src="apps/libs/ui-bootstrap.min.js"></script>
+<script src="apps/libs/ui-bootstrap-tpls.min.js"></script>
+<script src="apps/libs/angular-animate.min.js"></script>
+<script src="apps/libs/angular-touch.min.js"></script>
+<script src="apps/libs/angular-ui-router.min.js"></script>
+<script src="apps/libs/ngStorage.min.js"></script>
+<script src="apps/modules/app.js"></script>
+<script src="apps/controllers/headerController.js"></script>
+<script src="apps/controllers/homeController.js"></script>
+<script src="apps/controllers/supplierHomeController.js"></script>
+<script src="apps/controllers/buyerHomeController.js"></script>
+<script src="apps/controllers/registrationController.js"></script>
+<script src="apps/controllers/loginController.js"></script>
+<script src="apps/controllers/interestedBuyerController.js"></script>
+<script src="apps/controllers/viewAllController.js"></script>
+<script src="apps/services/services.js"></script>
+<!-- <script src = "https://maps.googleapis.com/maps/api/js?callback=initialize"></script> -->
+</head>
+
+<!-- apply our angular app to our site -->
+<body ng-app="reuseApp" ng-controller="headerController">
+	<div ng-include src="'views/header.html'" class="container-fluid"></div>
+	<div class="container-fluid bodyContainer">
+		<div ui-view="mainView"></div>
+	</div>
+	<div ng-include src="'views/footer.html'" class="container-fluid"></div>
+
+</body>
+</html>

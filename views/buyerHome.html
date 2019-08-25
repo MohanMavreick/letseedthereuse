@@ -1,0 +1,59 @@
+<div class="col-md-12 marginTop20">
+	<div class="col-md-8">
+		<span>Hi <b>John</b>, in this page you can view the supply of your interest
+ </span>
+	</div>
+	<div class="col-md-2">
+		<a class="anchorTag">Show my interests </a>
+	</div>
+	<div class="col-md-2">
+		<a class="anchorTag">Show all </a>
+	</div>
+	<div class="col-md-12 marginTop20">
+		<table class="table table-stripped">
+			<thead>
+				<tr>
+					<th>Commodity Name</th>
+					<th>Quantity</th>
+					<th>Location</th>
+					<th>Interests</th>
+					<th>Quote price</th>
+					<th>Action</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="detail in buyerDetails">
+					<td>{{detail.commodity}}</td>
+					<td>{{detail.quantity}}</td>
+					<td>{{detail.location}}</td>
+					<td><a ui-sref="interestedBuyers"><img ng-if="detail.interest !== 'None'"
+						src="assests/images/Thumbs up.JPG"
+						style="height: 20px; padding-right: 5px;"><span>{{detail.interest}}</span></a></td>
+					<td>{{detail.quotePrice}}</td>
+					<td><a title="Click here to book transportation"><img
+						src="assests/images/Truck.JPG"
+						style="height: 20px; padding-right: 5px;"></a>
+						<a title="Click here to look for storage facility"><img
+						src="assests/images/warehouse.JPG"
+						style="height: 20px; padding-right: 5px;"></a>
+						<a href=""  target="_blank" title="Click here to get financial assistance"><img
+						src="assests/images/Money.JPG"
+						style="height: 20px; padding-right: 5px;"></a></td>
+				</tr>
+			</tbody>
+		</table>
+
+	</div>
+	<div class="col-md-3  marginTop20"
+		data-ng-repeat="content in contentList">
+		<div class="pannel-container">
+
+			<div class="pannel-title">
+				<a>{{content.title}}</a>
+			</div>
+			<div>
+				<a><img src="{{content.img}}" class="pannel-body"></a>
+			</div>
+		</div>
+	</div>
+</div>
